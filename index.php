@@ -37,5 +37,5 @@ foreach($allFiles as $fileName) {
 //hooks
 register_activation_hook(__FILE__, 'MW_Activate_Plugin');
 add_action('init', "MW_portfolio_post_type");
-add_action('init', "MW_register_blocks");
+
 add_action('portfolio_add_form_fields', "MW_portfolio_add_form_fields");
