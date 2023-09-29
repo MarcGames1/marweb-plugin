@@ -25,6 +25,8 @@ function MW_portfolio_post_type() {
 		'filter_items_list'     => _x( 'Filter Portfolios list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'textdomain' ),
 		'items_list_navigation' => _x( 'Portfolios list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'textdomain' ),
 		'items_list'            => _x( 'Portfolios list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'textdomain' ),
+		'menu_icon'             => 'dashicons-portfolio',
+	
 	);
 
 	$args = array(
@@ -42,7 +44,9 @@ function MW_portfolio_post_type() {
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
         "show_in_rest"       => true,
         "description"        => __("A custom Post type for Portfolio", 'mw-cpt'),
-        "taxonomies"         => ['category', 'post_tag']
+        "taxonomies"         => ['category', 'post_tag'],
+		
+		
 	);
 
 	register_post_type( 'portfolio', $args );
